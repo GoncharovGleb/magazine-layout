@@ -11,15 +11,15 @@ $(function(){
 	 * Fixed footer
 	/* ---------------------------------------------- */
 
-	var hf = function(){
-		var h_footer = $('footer').height();
-		$('.content').css({
-			'paddingBottom': h_footer
-		});
+	// var hf = function(){
+	// 	var h_footer = $('footer').height();
+	// 	$('.content').css({
+	// 		'paddingBottom': h_footer
+	// 	});
 
-	}
+	// }
 
-	$(window).on('load resize', hf);
+	// $(window).on('load resize', hf);
 
 	/* ---------------------------------------------- /*
 	 * Fixed header

@@ -10,7 +10,7 @@ module.exports = {
         }
     },
     "css": {
-        "workflow": "manual"
+        "workflow": "concat"
     },
     "js": {
         "workflow": "concat",
