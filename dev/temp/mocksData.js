@@ -6,6 +6,9 @@
 },
 
 __pages: [{
+                name: 'article',
+                href: 'article.html'
+             },{
                 name: 'index',
                 href: 'index.html'
              }]

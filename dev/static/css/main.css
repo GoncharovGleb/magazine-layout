@@ -595,6 +595,10 @@ a {
   box-sizing: border-box;
 }
 
+strong {
+  font-family: "montserratsemibold";
+}
+
 /* ========================== FORM STYLER ======================== */
 .jq-checkbox {
   top: -1px;
@@ -1209,7 +1213,7 @@ a {
 
 body {
   color: #000;
-  font: 400 14px/1.4 "GothamNarrow", Arial, sans-serif;
+  font: 400 16px/1.625 "montserratregular";
   background: #FFF;
 }
 
@@ -1361,9 +1365,9 @@ body.advert-done .adv-banner-top {
   position: relative;
   overflow: hidden;
   opacity: 1;
-  background: #f9f9f9;
+  background: #fff;
   -webkit-box-shadow: 0 2px 15px 0 rgba(158, 158, 158, 0.2);
-  box-shadow: 0 2px 15px 0 rgba(158, 158, 158, 0.2);
+          box-shadow: 0 2px 15px 0 rgba(158, 158, 158, 0.2);
 }
 
 .wrapper {
@@ -1375,9 +1379,9 @@ body.advert-done .adv-banner-top {
 }
 
 h1 {
-  font-size: 65px;
-  line-height: 1.09;
-  font-family: "InStyle", sans-serif;
+  font-size: 50px;
+  line-height: 1.1;
+  font-family: "prataregular";
   font-weight: 400;
   margin-bottom: 25px;
 }
@@ -1433,26 +1437,26 @@ button {
 }
 
 blockquote {
-  font-family: "SabonLTCYR";
-  font-size: 24px;
-  font-style: italic;
-  line-height: 1.5;
+  font-family: "prataregular";
+  font-size: 30px;
+  line-height: 1.333;
+  padding: 0 90px;
   text-align: center;
-  color: #b82c2d;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 blockquote .author {
-  margin-top: 17px;
+  margin-top: 25px;
 }
 
 blockquote:before {
   content: "";
   display: block;
-  margin: 0 auto 22px;
-  border-top: 3px solid;
-  max-width: 55%;
+  width: 59px;
+  height: 55px;
+  margin: 0 auto 15px;
+  font-size: 280px;
 }
 
 a {
@@ -1473,11 +1477,17 @@ a.orange:hover {
 }
 
 .author {
-  font-family: "SabonLTCYR";
+  font-family: "montserratsemibold";
   font-size: 14px;
+  line-height: 1.285;
   display: block;
-  color: #999;
+  color: #000;
   font-style: normal;
+}
+
+.author span {
+  display: block;
+  text-transform: uppercase;
 }
 
 .mb0 {
@@ -2295,8 +2305,8 @@ label {
   width: 100%;
   min-width: 320px;
   text-align: left;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .content-wrap {
@@ -2312,15 +2322,16 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 960px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .wrap-content {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding-right: 30px;
+  padding-left: 70px;
 }
 
 .wrap-content > *:first-child {
@@ -2345,6 +2356,41 @@ label {
 
 .catalog .wrap-content {
   overflow: hidden;
+}
+
+.breadcrumbs {
+  margin: 0 0 15px 0;
+}
+
+.breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.breadcrumbs ul li {
+  font-size: 14px;
+  font-family: "montserratsemibold";
+  text-transform: uppercase;
+  margin: 0 22px 0 0;
+  position: relative;
+}
+
+.breadcrumbs ul li:before {
+  content: '/';
+  position: absolute;
+  top: 0;
+  right: -14px;
+}
+
+.breadcrumbs ul li:last-child:before {
+  display: none;
 }
 
 /* Rubric ============ */
@@ -2485,14 +2531,6 @@ label {
   margin: 0;
 }
 
-.category {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: #b82c2d;
-  text-transform: uppercase;
-}
-
 .date {
   font-size: 12px;
   letter-spacing: 1px;
@@ -2542,15 +2580,28 @@ label {
 }
 
 /* Article Box ============ */
-.article-box .category {
-  margin-bottom: 17px;
+.article-box h2 {
+  font-family: "prataregular";
+  font-size: 30px;
+  line-height: 1.33;
+  font-weight: normal;
+  margin: 30px 0 20px 0;
 }
 
-.article-box h2 {
-  font-family: "SabonLTCYR";
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.38;
+.article-box h2:first-child {
+  margin-top: 0;
+}
+
+.article-box h3 {
+  font-family: "prataregular";
+  font-size: 20px;
+  line-height: 2;
+  font-weight: normal;
+  margin: 30px 0 20px 0;
+}
+
+.article-box h3:first-child {
+  margin-top: 0;
 }
 
 .article-box-details {
@@ -2579,9 +2630,10 @@ label {
 }
 
 .image figcaption {
-  margin-top: 16px;
+  margin-top: 14px;
+  line-height: 1.285;
   text-align: center;
-  font-family: "SabonLTCYR";
+  font-family: "montserratsemibold";
 }
 
 .image img {
@@ -2705,8 +2757,8 @@ label {
 
 .opinion {
   background: #fff;
-  padding: 30px;
-  margin: 30px auto;
+  padding: 0 80px;
+  margin: 50px auto;
 }
 
 .opinion-header {
@@ -2772,19 +2824,21 @@ label {
 }
 
 .tags-list .tags {
-  font-size: 12px;
+  font-size: 11px;
+  font-family: "montserratsemibold";
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 30px;
-  border: solid 1px #e7e4e4;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 31px;
+  border: solid 1px #c7c7c7;
   padding: 0 10px;
   margin-right: 7px;
   margin-bottom: 10px;
   text-transform: uppercase;
+  color: #727272;
 }
 
 .tags-list .tags:hover {
@@ -2793,36 +2847,6 @@ label {
 
 .tags-list .tags:last-child {
   margin-right: 0;
-}
-
-.breadcrumbs {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.breadcrumbs__item:not(:last-child):after {
-  content: "—";
-  margin: 0 5px 0 3px;
-  color: #999;
-  font-size: 13px;
-}
-
-.breadcrumbs__link {
-  white-sapce: nowrap;
-  color: #999;
-  font-size: 13px;
-}
-
-.breadcrumbs__link:hover {
-  text-decoration: underline;
-  color: #000;
 }
 
 /* Search Page ============ */
@@ -4218,9 +4242,6 @@ label {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .category {
-    font-size: 12px;
-  }
   .rubric__img img {
     width: 100%;
     height: auto;
@@ -4503,9 +4524,6 @@ label {
   .rubric-full .rubric__head-info {
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-  .category {
-    font-size: 12px;
   }
   .rubric__wrap {
     display: block;
