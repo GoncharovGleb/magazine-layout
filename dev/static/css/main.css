@@ -5130,6 +5130,7 @@ label {
 }
 
 .digital__content-title {
+  font-family: "prataregular";
   font-size: 50px;
   margin: 0 0 30px 0;
 }
@@ -5163,6 +5164,72 @@ label {
 .digital__image img {
   max-width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .digital__content {
+    padding: 30px 40px;
+    width: 45%;
+  }
+  .digital__content-title {
+    font-size: 45px;
+  }
+  .digital__image {
+    padding-right: 70px;
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .digital__content {
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .digital__image {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .digital {
+    display: block;
+    padding: 25px 20px 100px 20px;
+    position: relative;
+  }
+  .digital__content {
+    width: auto;
+    padding: 0;
+    margin: 0 0 25px 0;
+  }
+  .digital__content-date {
+    font-size: 10px;
+    margin: 0 0 15px 0;
+  }
+  .digital__content-title {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+  }
+  .digital__content-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .digital__content-download {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .digital__image {
+    width: auto;
+    text-align: center;
+    padding: 0;
+  }
+  .digital__image img {
+    margin: 0 auto;
+    max-width: 290px;
+  }
 }
 
 .footer {
