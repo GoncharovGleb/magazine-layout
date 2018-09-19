@@ -63,7 +63,7 @@
       align-content: center;
       justify-content: center;
   
-      #{$self}.is-active { 
+      &.is-active { 
         .search { 
           opacity: 1; 
           pointer-events: auto; 
