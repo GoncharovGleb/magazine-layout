@@ -5,6 +5,7 @@ $(window).on('load', function(){
 	$('body').removeClass('loaded'); 
 });
 
+
 $(function(){
 
 	/* ---------------------------------------------- /*
@@ -20,6 +21,32 @@ $(function(){
 	// }
 
 	// $(window).on('load resize', hf);
+
+	/* ---------------------------------------------- /*
+	 * Submit form
+	/* ---------------------------------------------- */
+
+	var checkAgreement = function() {
+		var form = $('.subscribe-form-imaged__form').find('form');
+
+		if (form.length) {
+			var checkbox = form.find('.checkbox input');
+			var button = form.find('button');
+
+			if (checkbox.length) {
+				checkbox.on('change', function(event) {
+					console.log();
+					if (checkbox.prop('checked')) {
+						button.prop('disabled', false);
+					} else {
+						button.prop('disabled', true);
+					}
+				})
+			}
+		}
+	}
+
+	checkAgreement();
 
 	/* ---------------------------------------------- /*
 	 * Fixed header

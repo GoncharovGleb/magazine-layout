@@ -3,7 +3,7 @@
     min-width: 320px; 
     text-align: left; 
     position: relative; 
-    z-index: 9; 
+    z-index: 30; 
     background: #000;
   
     &-top {
@@ -52,16 +52,24 @@
       padding-right: 60px; 
       overflow: hidden; 
       z-index: 20;
+      display: flex;
+      align-content: center;
+      justify-content: center;
   
       .logo svg { 
         width: 119px; 
         height: 28px; 
         display: block; 
       }
-  
-      display: flex;
-      align-content: center;
-      justify-content: center;
+
+      .icon-search {
+        width: 16px;
+        height: 16px;
+
+        svg {
+          margin: 2px 0 0 0;
+        }
+      }
   
       &.is-active { 
         .search { 
@@ -77,16 +85,29 @@
       }
     }
   
-    &.fixed {
+    &.fixed,
+    &.as-fixed {
       padding-bottom: 60px; 
     }
-  
+
+    &.as-fixed &-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
     &.fixed &-bottom {
       position: fixed; 
+      top: 0;
+      left: auto;
+      z-index: 30;
+    }
+  
+    &.fixed &-bottom,
+    &.as-fixed &-bottom {
       max-width: 1280px; 
       width: 100%; 
-      top: 0; 
-      z-index: 9;
+      z-index: 30;
       background: #000;
       display: flex;
       justify-content: flex-start;
@@ -128,7 +149,7 @@
   
         #{$self}__socials {
           a {
-            color: #8b8b8b;
+            color: #8b8986;
   
             &:hover {
               color: $orange;
@@ -157,7 +178,7 @@
     @media screen and (max-width: 1280px) {
     }
   
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       z-index: 12;
       position: fixed;
       top: 0;
@@ -171,8 +192,7 @@
       }
   
       &-bottom {
-        height: 70px;
-        background: #fff;
+        height: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,7 +202,6 @@
         }
   
         .logo {
-          color: #000;
           margin: 0;
           display: block !important;
           
@@ -197,14 +216,274 @@
         }
       }
   
-      &.fixed &-bottom {
-        background: #fff;
+      &.fixed &-bottom, 
+      &.as-fixed &-bottom {
         justify-content: center;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      z-index: 100;
+    }
+  }
+
+.nav-s { 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  bottom: 0;
+  overflow: hidden; 
+  width: 320px; 
+  background: #222222; 
+  z-index: 99;
+  transition: width 0.25s linear;
+  transform: translate(-100%, 0);
+  transition: all .2s ease-out;
+
+  &.open { 
+    transform: translate(0, 0);
+  }
+
+  &-inner { 
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
+    top: 0; 
+    height: 100%; 
+    padding-bottom: 20px;
+    transition: transform 0.25s linear;
+  }
+
+  &-header { 
+    position: relative; 
+    padding: 32px 20px 15px;
+    margin: 0 -20px 0 0;
+
+    .logo { 
+      width: 106px; 
+      height: 24px;
+    }
+  }
+
+  &-close { 
+    font-size: 24px; 
+    line-height: 24px; 
+    border: none; 
+    padding: 0; 
+    background-color: transparent; 
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+
+    span {
+      color: #878787;
+      transition: color .2s ease-out;
+
+      &:hover { 
+        color: #d6a859; 
+      }
+    }
+  }
+
+  &-content { 
+    padding: 0 20px; 
+
+    .social { 
+      margin: 30px 0 20px 0;
+      justify-content: flex-start; 
+    }
+
+    .social__link { 
+      margin-right: 20px;
+      font-size: 18px;
+      color: #ddd;
+
+      &:hover {
+        color: #d6a859;
+      }
+    }
+  }
+
+  &-footer { 
+    margin: 19px 0;
+    padding: 19px 0; 
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  &-footer-menu { 
+    list-style: none; 
+
+    li {
+      margin: 0;
+
+      a { 
+        display: block;
+        text-align: left;
+        font-size: 14px; 
+        color: #fff; 
+        text-transform: uppercase;
+        font-family: $regular;
+        margin: 0;
+        padding: 4px 0;
   
-        .logo {
-          color: #000;
-          margin: 0;
+        &:hover { 
+          color: #d6a859; 
+        }
+
+        &:before {
+          top: 9px;
         }
       }
     }
   }
+
+  &-footer-menu-subcategory {
+    list-style: none;
+    display: none;
+
+    li {
+      a {
+        color: #999;
+      }
+    }
+  }
+
+  .scroll-pane { 
+    position: absolute; 
+    top: 60px; 
+    bottom: 0px; 
+    overflow: auto; 
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 20px;
+    }
+  }
+
+  .jspContainer { 
+    height: 100% !important; 
+  }
+
+  .jspHorizontalBar { 
+    display: none; 
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.nav-s-menu { 
+
+  $self: &;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  #{$self}__item--main-page #{$self}__link {
+    color: #999;
+  }
+
+  #{$self}__link { 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    padding: 9px 40px 9px 0; 
+    display: block;
+    color: #fff;
+    font-family: $semibold;
+
+    &:hover {
+      color: #d6a859;
+    }
+  }
+
+  #{$self}__link._opened {
+    color: #d6a859;
+  }
+
+  #{$self}-subcategory {
+    margin: 7px 0 0 0;
+    display: none;
+    list-style: none;
+
+    li {
+      list-style: none;
+
+      a {
+        font-size: 14px;
+        display: block;
+        color: #999;
+        text-transform: uppercase;
+        padding: 4px 0;
+
+        &:hover {
+          color: #d6a859;
+        }
+      }
+    }
+  }
+
+  #{$self}-subcategory._opened {
+    display: block;
+  }
+}
+
+._has-children {
+  position: relative;
+
+  &:before { 
+    content: ""; 
+    position: absolute;
+    right: 9px;
+    top: 13px;
+    color: #878787;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  &:hover:before {
+    color: #d6a859;
+  }
+}
+
+._has-children._opened {
+  &:before {
+    transform: rotate(180deg);
+  }
+}
+
+.menu {
+  list-style: none; 
+  display: flex; 
+  justify-content: center;
+  font-size: 12px;
+  font-family: 'montserratsemibold';
+  
+  &__item {
+    margin: 0 17px;
+    padding: 0;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    &--active {
+      a {
+        color: #d29f47; 
+      }
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    &__item {
+      margin: 0 10px;
+    }
+  }
+}
+
+
+
+
+
+

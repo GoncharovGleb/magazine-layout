@@ -1,5 +1,5 @@
 'header': {
-    defaults: {
+    main: {
         title: 'Instyle - Главная',
         showHeaderTop: true,
         asFixed: false
