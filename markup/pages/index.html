@@ -1,5 +1,11 @@
 {{> header/header header.main}}
 
+<div class="adv-banner adv-banner-250x250 show-on-mobile">
+    <a href="#">
+        <img src="http://via.placeholder.com/250x250" alt="">
+    </a>
+</div>
+
 <div class="rubric rubric--full">
     <a href="#">
         <img src="%=static=%img/content/rubric-banner.jpg" alt="20 лучших черных и белых платьев на распродаже">
@@ -12,13 +18,13 @@
     </a>
 </div>
 
-<div class="adv-banner adv-banner-1280x250">
+<div class="adv-banner adv-banner-1280x250 hide-on-mobile">
     <a href="#">
         <div class="only-text">banner</div>
     </a>
 </div>
 
-<div class="articles-row articles-row--4-in-line">
+<div class="articles-row articles-row--4-in-line mobile-scroll">
     <div class="article article--1-from-4">
         <a class="article__link" href="#"></a>
         <div class="article__image">
@@ -93,7 +99,7 @@
                     <a href="#" class="more">Все подборки</a>
                 </div>
                 <div class="imaged-block__content-wrapper">
-                    <div class="selection">
+                    <div class="selection mobile-scroll">
                         <div class="selection__item">
                             <a href="#">
                                 <div class="selection__item-img"><img src="%=static=%img/content/selection-img-1.jpg"></div>
@@ -173,6 +179,12 @@
     </div>
 </div>
 
+<div class="adv-banner adv-banner-250x250 show-on-mobile">
+    <a href="#">
+        <img src="http://via.placeholder.com/250x250" alt="">
+    </a>
+</div>
+
 <div class="rubric rubric--full">
     <a href="#">
         <img src="%=static=%img/content/rubric-banner-1.jpg" alt="Все подробности показа Valentino Haute Couture 2018/2019">
@@ -243,11 +255,16 @@
     </a>
 </div>
 
+<div class="show-more-block show-on-mobile">
+    <button class="show-more" type="button">Все популярное</button>
+</div>
+
 <div class="imaged-block-wrapper">
     <div class="imaged-block-wrapper__left">
+        <h2 class="read-more-title show-on-mobile">Спецпроекты</h2>
         <div class="imaged-block">
             <div class="imaged-block__content" style="background-image: url(%=static=%img/content/imaged-bg-2.jpg)">
-                <div class="imaged-block__content-head">
+                <div class="imaged-block__content-head hide-on-mobile">
                     <h2>Спецпроекты</h2>
                     <a href="#" class="more">Все спецпроекты</a>
                 </div>
@@ -269,7 +286,7 @@
             </div>
         </div>
     </div>
-    <div class="imaged-block-wrapper__right">
+    <div class="imaged-block-wrapper__right hide-on-mobile">
         <h2 class="read-more-title">Instyle рекомендует</h2>
         <div class="recomended-sm">
             <div class="article article--sm">
@@ -382,9 +399,10 @@
 
 <div class="imaged-block-wrapper imaged-block-wrapper--video">
     <div class="imaged-block-wrapper__left">
+        <h2 class="read-more-title show-on-mobile">Видео</h2>
         <div class="imaged-block">
             <div class="imaged-block__content" style="background-image: url(%=static=%img/content/imaged-bg-3.jpg)">
-                <div class="imaged-block__content-head">
+                <div class="imaged-block__content-head hide-on-mobile">
                     <h2>Видео</h2>
                     <a href="#" class="more">Все видео</a>
                 </div>
@@ -395,7 +413,7 @@
                 </div>
             </div>
 
-            <div class="imaged-block__related">
+            <div class="imaged-block__related hide-on-mobile">
                 <a href="#" class="imaged-block__related-item imaged-video-item" style="background-image: url(%=static=%img/content/imaged-item-3-1.jpg)">
                     <span>Как ухаживает за кожей Тамуна Циклаури</span>
                 </a>
@@ -408,7 +426,7 @@
             </div>
         </div>
     </div>
-    <div class="imaged-block-wrapper__right">
+    <div class="imaged-block-wrapper__right hide-on-mobile">
         <div class="adv-banner adv-banner-300x600">
             <a href="#">
                 <img src="http://via.placeholder.com/300x600" alt="">
@@ -420,7 +438,7 @@
 <div class="best-to-buy">
     <h2 class="read-more-title">Лучшие покупки</h2>
 
-    <div class="product-wrap product-wrap--best-to-buy">
+    <div class="product-wrap product-wrap--best-to-buy mobile-scroll">
         <div class="product-wrap__item">
             <div class="product">
                 <a href="#" class="product__link"></a>

@@ -127,4 +127,53 @@
             }
         }
     }
+
+    @media screen and (max-width: 767px) {
+        display: block;
+        margin: 0 -10px 40px;
+
+        &__form {
+            width: auto;
+            padding: 20px;
+            text-align: center;
+
+            h3 {
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            .subscribe-form__form {
+                display: flex;
+                
+                input[type=text] {
+                    width: auto;
+                    margin: 0;
+                }
+
+                button {
+                    width: 60px;
+                }
+            }
+        }
+
+        &__share {
+            width: auto; 
+            left: 0;
+            padding: 25px;
+
+            h4 {
+                font-size: 10px;
+            }
+
+            h3 {
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            .social {
+                max-width: 200px;
+                margin: auto;
+            }
+        }
+    }
 }

@@ -234,6 +234,36 @@ $(function(){
     if($('.styler').length){
         $('.styler').styler();
 	};
+
+	var mobileSliderInit = function() {
+		var sliders = $('.mobile-scroll');
+		var settings = {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+			arrows: false,
+			dots: false,
+			centerMode: true,
+			responsive: [
+				{
+		            breakpoint: 999,
+		            settings: "unslick"
+		        },{
+		            breakpoint: 767,
+		            settings: "slick"
+		        },
+	        ]
+		};
+
+		console.log(sliders);
+
+		sliders.each(function (index,slider) {
+			$(slider).slick(settings);
+		});
+	}
+
+	mobileSliderInit();
+
+	
 	
 	/* ---------------------------------------------- /*
 	 * Article Slider
