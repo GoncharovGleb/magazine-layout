@@ -85,5 +85,46 @@
             max-width: 420px;
             margin: auto;
         }
+
+        .social {
+            justify-content: center;
+        } 
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__form {
+            min-height: 0;
+            padding: 40px 80px 20px 40px;
+
+            h3 {
+                font-size: 25px;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            form {
+                margin: 20px 0 0 0;
+            }
+        }
+
+        &__share {
+            min-height: 0;
+            height: auto;
+            padding: 50px;
+
+
+            h4 {
+                margin: 0 0 15px 0;
+            }
+
+            h3 {
+                font-size: 25px;
+                line-height: 1.2;
+                margin: 0 0 15px 0;
+            }
+        }
     }
 }
