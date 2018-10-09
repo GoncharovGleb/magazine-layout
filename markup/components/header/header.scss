@@ -3,7 +3,7 @@
     min-width: 320px; 
     text-align: left; 
     position: relative; 
-    z-index: 30; 
+    z-index: 100; 
     background: #000;
   
     &-top {
@@ -50,7 +50,6 @@
       height: 60px; 
       padding-left: 60px; 
       padding-right: 60px; 
-      overflow: hidden; 
       z-index: 20;
       display: flex;
       align-content: center;
@@ -179,7 +178,7 @@
     }
   
     @media screen and (max-width: 900px) {
-      z-index: 12;
+      z-index: 100;
       position: fixed;
       top: 0;
   
@@ -242,7 +241,7 @@
   overflow: hidden; 
   width: 320px; 
   background: #222222; 
-  z-index: 99;
+  z-index: 150;
   transition: width 0.25s linear;
   transform: translate(-100%, 0);
   transition: all .2s ease-out;
@@ -474,12 +473,60 @@
     color: #fff;
     display: flex;
     align-items: center;
+    position: relative;
+    
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
 
     &--active {
       a {
         color: #d29f47; 
       }
     }
+  }
+
+  &__item-submenu {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-60px, 100%);
+    background: #fff;
+    padding: 20px 30px;
+    min-width: 165px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-out;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        margin: 0;
+        padding: 0;
+
+        a {
+          font-family: $semibold;
+          color: #000;
+          font-size: 12px;
+          line-height: 30px;
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      } 
+    }
+  }
+
+  &__item:hover  &__item-submenu {
+    visibility: visible;
+    opacity: 1;
   }
 
   @media screen and (max-width: 1023px) {

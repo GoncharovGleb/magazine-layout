@@ -190,7 +190,7 @@ body.error-505 .footer .social { position: static; margin-bottom: 15px; -webkit-
   left: 0; 
   right: 0; 
   bottom: 0; 
-  z-index: 90; 
+  z-index: 140; 
   background: rgba(0, 0, 0, 0.7); 
   transition: opacity 0.3s; 
 
@@ -239,10 +239,10 @@ h1 {
     line-height: 1.125;
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 767px) {
     font-size: 30px;
     line-height: 1.166;
-    margin: 0 0 45px 0;
+    margin: 0 0 25px 0;
   }
 }
 
@@ -1445,7 +1445,6 @@ body {
   }
   
   &--in-article {
-    margin: 40px auto;
 
     #{$self}__head { 
       margin: 25px 0 0 0;
@@ -1567,6 +1566,10 @@ body {
         width: auto;
         max-width: 220px;
         margin: 0 auto 20px;
+      }
+
+      .product__title {
+        text-align: center;
       }
     }
   }
@@ -2276,7 +2279,7 @@ body {
   &__related {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   &__related-item {
@@ -2329,6 +2332,10 @@ body {
       a.more {
         display: none;
       }
+    }
+
+    &__related {
+      flex-wrap: wrap;
     }
 
     .show-more {

@@ -245,7 +245,7 @@ $(function(){
 			centerMode: true,
 			responsive: [
 				{
-		            breakpoint: 999,
+		            breakpoint: 9999,
 		            settings: "unslick"
 		        },{
 		            breakpoint: 767,
