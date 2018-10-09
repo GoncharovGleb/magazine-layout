@@ -221,15 +221,17 @@
       }
     }
 
-    @media screen and (max-width: 767px) {
-      z-index: 100;
-
+    @media screen and (max-width: 1024px) {
       &-bottom {
         .logo {
           margin: 0 !important;
           color: #fff;
         }
       }
+    }
+
+    @media screen and (max-width: 767px) {
+      z-index: 100;
     }
   }
 
