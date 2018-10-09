@@ -221,7 +221,7 @@
       }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       &-bottom {
         .logo {
           margin: 0 !important;
@@ -231,7 +231,7 @@
     }
 
     @media screen and (max-width: 767px) {
-      z-index: 100;
+      z-index: 160;
     }
   }
 
@@ -494,8 +494,8 @@
     position: absolute;
     display: block;
     bottom: 0;
-    left: 50%;
-    transform: translate(-60px, 100%);
+    left: 0;
+    transform: translate(-27px, 100%);
     background: #fff;
     padding: 20px 30px;
     min-width: 165px;

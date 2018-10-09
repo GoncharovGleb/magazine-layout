@@ -264,6 +264,26 @@ $(function(){
 	mobileSliderInit();
 
 	
+
+	var mobileSectionDropdowmHandler = function() {
+		var trigger =$('.section-hero__menu-trigger');
+		
+		if (trigger.length) {
+			var menuBlock = $('.section-hero__menu');
+
+			if (menuBlock.length) {
+				//Attach events
+
+				trigger.click(function(e) {
+					e.preventDefault();
+					menuBlock.toggleClass('_is-active');
+				});
+			}
+		}
+	}
+
+	mobileSectionDropdowmHandler();
+
 	
 	/* ---------------------------------------------- /*
 	 * Article Slider

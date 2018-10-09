@@ -372,7 +372,8 @@ a {
 /* 3.1. Icons ====================== */
 [class^="icon-"], 
 [class*=" icon-"], 
-._has-children::before { /* use !important to prevent issues with browser extensions that change fonts */ font-family: "icomoon" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+._has-children::before,
+.section-hero__menu-trigger::before { /* use !important to prevent issues with browser extensions that change fonts */ font-family: "icomoon" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .icon-cross:before { content: ""; }
 
@@ -767,7 +768,7 @@ body {
   }
 
   &--full {
-    margin: 0 -20px 40px;
+    margin: 0 -10px 40px;
     display: block;
 
     a {
@@ -775,6 +776,8 @@ body {
     }
 
     img {
+      width: 100%;
+      height: auto;
       transition: opacity .2s ease-out;
     }
   
@@ -2183,10 +2186,24 @@ body {
         .article {
           flex: 1 1 100%;
           margin: 0;
+          padding-left: 0;
           padding-right: 20px;
 
           &:nth-child(4) {
             display: none;
+          }
+        }
+
+        &--for-video {
+          display: block;
+
+          .article {
+            padding: 0;
+            margin: 0 0 20px 0;
+
+            &:nth-child(4) {
+              display: block;
+            }
           }
         }
       }
@@ -2565,6 +2582,12 @@ body {
   }
 }
 
+.hide-on-tablet-portrait {
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
 .hide-on-mobile {
   @media screen and (max-width: 767px) {
     display: none;
@@ -2576,5 +2599,146 @@ body {
 
   @media screen and (max-width: 767px) {
     display: block;
+  }
+}
+
+
+.section-hero {
+  text-align: center;
+  height: 250px;
+  color: #fff;
+  position: relative;
+  margin: -60px -10px 60px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    font-family: 'InStyle';
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 140px;
+    font-weight: normal;
+    margin: 20px 0 0 0;
+  }
+
+  .menu {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 60px;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 20;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 10;
+  }
+
+  @media screen and (max-width: 767px){
+    height: 175px;
+    background-size: auto 100%;
+    background-repeat: none;
+    margin: 0 -10px 140px;
+    position: relative;
+
+    h1 {
+      font-size: 70px;
+      margin: 0;
+    }
+
+    &__menu {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      height: 100px;
+      width: 100%;
+      background: #faf2e4;
+      padding: 20px;
+    }
+
+    &__menu-trigger {
+      background: #fff;
+      height: 60px;
+      display: block;
+      line-height: 60px;
+      font-family: $regular;
+      color: #8b8b8b;
+      text-align: left;
+      padding: 0 40px 0 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #878787;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    }
+
+    &__menu._is-active .menu {
+      visibility: visible;
+      height: auto;
+    }
+
+    &__menu._is-active &__menu-trigger::before {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .menu {
+      background: #fff;
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+      transition: heigth .2s ease-out;
+      display: block;
+      padding: 0 20px;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      width: calc(100% - 40px);
+      padding-top: 10px;  
+      padding-bottom: 10px; 
+    }
+
+    .menu__item {
+      text-transform: none;
+      margin: 0;
+      font-family: $regular;
+
+      a {
+        display: block;
+        color: #8b8b8b;
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+
+    .menu__item--active {
+      font-family: $medium;
+
+      a {
+        color: #000;
+      }
+    }
   }
 }
