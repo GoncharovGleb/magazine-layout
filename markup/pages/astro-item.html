@@ -1,0 +1,79 @@
+{{>header/header header.astro}}
+
+<div class="section-hero" style="background-image: url('%=static=%img/content/section-astro-bg.jpg')">
+    <h1>
+        Гороскоп
+    </h1>
+    <div class="section-hero__menu">
+        <a class="section-hero__menu-trigger">
+            Выберите раздел
+        </a>
+        <ul class="menu menu--section">
+            <li class="menu__item">
+                <a href="#" class="menu__link">На сегодня</a>
+            </li>
+            <li class="menu__item menu__item--active">
+                <a href="#" class="menu__link">На неделю</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">На месяц</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">На год</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="content-wrap">
+    <article class="article-box">
+        <div class="wrap">
+            <div class="wrap-content">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><span>Мода</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrap-sidebar">
+                <div class="adv-banner">
+                    <a href="#">
+                        <img src="http://via.placeholder.com/300x600" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<section class="read-more-section">
+    <h2 class="read-more-title">Материалы по теме</h2>
+    <div class="articles-row articles-row--2-in-line">
+        <div class="article article--1-from-2">
+            <a class="article__link" href="#"></a>
+            <div class="article__image">
+                <img src="http://via.placeholder.com/620x455" alt="" />
+            </div>
+            <div class="article__content">
+                <span class="article__section"><a href="#">Мода</a></span>
+                <h5 class="article__title">В Вероне прошел показ Tezenis осень-зима 2018/19</h5>
+            </div>
+        </div>
+        <div class="article article--1-from-2">
+            <a class="article__link" href="#"></a>
+            <div class="article__image">
+                <img src="http://via.placeholder.com/620x455" alt="" />
+            </div>
+            <div class="article__content">
+                <span class="article__section"><a href="#">Мода</a></span>
+                <h5 class="article__title">Показ Dolce&Gabbana Alta Moda на озере Комо</h5>
+            </div>
+        </div>
+    </div>
+    <div class="show-more-block">
+        <button class="show-more" type="button">Загрузить еще</button>
+    </div>
+</section>
+
+{{>footer/footer footer.astro}}

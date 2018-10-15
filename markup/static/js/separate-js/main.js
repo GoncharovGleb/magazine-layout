@@ -26,9 +26,7 @@ $(function(){
 	 * Submit form
 	/* ---------------------------------------------- */
 
-	var checkAgreement = function() {
-		var form = $('.subscribe-form-imaged__form').find('form');
-
+	var checkAgreement = function(form) {
 		if (form.length) {
 			var checkbox = form.find('.checkbox input');
 			var button = form.find('button');
@@ -46,7 +44,8 @@ $(function(){
 		}
 	}
 
-	checkAgreement();
+	checkAgreement($('.subscribe-form-imaged__form').find('form'));
+	checkAgreement($('.subscribe-form--astro').find('form'));
 
 	/* ---------------------------------------------- /*
 	 * Fixed header

@@ -1,0 +1,119 @@
+.subscribe-form--astro {
+    justify-content: flex-start;
+    margin: 30px 80px 90px 80px;
+
+    .jq-selectbox {
+        z-index: 90 !important;
+    }
+
+    .jq-selectbox__select {
+        margin: 0 10px 0 0;
+        padding: 0 20px;
+        position: relative;
+        border-radius: 0;
+        border: 0;
+        flex-grow: 1;
+        height: 100%;
+        width: 240px;
+        cursor: pointer;
+    }
+
+    .jq-selectbox__select-text {
+        font-family: $regular;
+        font-size: 14px;
+        height: 100%;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+    }
+
+    .jq-selectbox__dropdown {
+        border: 0;
+        border-radius: 0;
+        margin-top: 0;
+        width: calc(100% - 10px);
+        padding-bottom: 15px;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        width: auto;
+        height: auto;
+        border: 0;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .jq-selectbox__trigger-arrow:before {
+        content: "";
+        color: #878787;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .jq-selectbox li {
+        font-family: $regular;
+        padding: 6px 20px;
+        color: #8b8b8b;
+        cursor: pointer;
+    }
+
+    .jq-selectbox li.sel {
+        font-family: $semibold;
+        color: #000;
+    }
+
+    .jq-selectbox li.selected {
+        background: transparent;
+    }
+
+    .jq-selectbox li:hover {
+        color: $orange;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    select {
+        display: none;
+    }
+}
+
+.subscribe-form--astro .subscribe-form__form {
+    width: auto;
+    flex-grow: 1;
+    position: relative;
+
+    input {
+        flex-grow: 1;
+    }
+
+    .checkbox {
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+
+        .label {
+            color: #8b8b8b;
+            font-family: $regular;
+
+            &:before {
+                border-color: #8b8b8b;
+            }
+
+            &:hover {
+                &:before {
+                    border-color: $orange;
+                }
+            }
+        }
+    }
+
+    input[type=checkbox]:checked + .label:hover:before {
+        border-color: #8b8b8b;
+    } 
+}
+
+.subscribe-form--astro .subscribe-form__title {
+    width: 320px;
+}

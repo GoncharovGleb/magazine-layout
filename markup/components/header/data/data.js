@@ -13,5 +13,10 @@ header: {
         title: 'Instyle - Мода - Раздел',
         showHeaderTop: false,
         asFixed: true
+    },
+    astro: {
+        title: 'Instyle - Гороскоп - Раздел',
+        showHeaderTop: false,
+        asFixed: true
     }
 }
