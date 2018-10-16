@@ -2742,13 +2742,27 @@ body {
 
 .astro-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 30px;
+  padding: 0 80px;
 
   .adv-banner {
-    width: calc(100% + 80px);
-    margin: 0 -40px 60px;
+    width: calc(100% + 180px);
+    margin: 0 -90px 60px;
+  }
+
+  @media screen and (max-width: 1300px) {
+    padding: 0;
+
+    .adv-banner {
+      margin: 0 -10px 60px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 0 0;
   }
 }
 
@@ -2757,7 +2771,7 @@ body {
 
   max-width: 300px;
   text-align: center;
-  margin: 0 50px 60px 50px;
+  margin: 0 0 60px 0;
   position: relative;
 
   &__link {
@@ -2799,6 +2813,18 @@ body {
 
     #{$self}__img {
       opacity: .8;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    max-width: 240px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+
+    &__title {
+      margin-bottom: 0;
     }
   }
 }
