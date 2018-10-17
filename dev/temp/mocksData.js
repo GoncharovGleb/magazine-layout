@@ -35,6 +35,9 @@ __pages: [{
                 name: 'index',
                 href: 'index.html'
              },{
+                name: 'live',
+                href: 'live.html'
+             },{
                 name: 'news',
                 href: 'news.html'
              },{
