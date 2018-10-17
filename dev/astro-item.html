@@ -5,9 +5,11 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 	<title>Instyle - Гороскоп - Раздел</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
-	<link rel="stylesheet" href="/static/css/separate-css/jquery.jscrollpane.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/main.css" />	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/solid.css" integrity="sha384-osqezT+30O6N/vsMqwW8Ch6wKlMofqueuia2H7fePy42uC05rm1G+BUPSd2iBSJL" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+	<link rel="stylesheet" href="static/css/separate-css/jquery.jscrollpane.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css" />	
 	<script>
 		var tag = document.createElement('script');
 		tag.src = "https://www.youtube.com/iframe_api";
@@ -27,10 +29,12 @@
 	<header class="header as-fixed">
 		<div class="header-social-bar">
 			<ul class="header-social-bar__socials">
-				<li><a href="#" class="social__link"><span class="icon-facebook"></span></a></li>
-				<li><a href="#" class="social__link"><span class="icon-twitter"></span></a></li>
-				<li><a href="#" class="social__link"><span class="icon-youtube"></span></a></li>
-				<li><a href="#" class="social__link"><span class="icon-insta"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-facebook-f"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-twitter"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-vk"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-youtube"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-instagram"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-odnoklassniki"></span></a></li>
 			</ul>
 			<div class="header-social-bar__subscribe-links">
 				<ul>
@@ -42,13 +46,10 @@
 		<div class="header-scroll-marker"></div>
 		<div class="header-bottom">
 			<button class="burger">
-				<span class="icon-burger"></span>
+				<span class="fas fa-bars"></span>
 			</button>
 			<button class="open-search js-open-search">
-				<span class="icon-search open-search__icon">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><path fill="currentColor" d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z"/></svg>
-				</span>
-				<span class="icon-cross open-search__icon"></span>
+				<span class="fas fa-search"></span>
 			</button>
 			<div class="logo" style="display: none;">
 				<a href="#">
@@ -144,7 +145,7 @@
 							<a href="#" class="nav-s-menu__link">Красота</a>
 						</li>
 						<li class="nav-s-menu__item">
-							<a href="#" class="nav-s-menu__link _has-children">Звезды</a>
+							<a href="#" class="nav-s-menu__link _has-children fas fa-chevron-down">Звезды</a>
 							<ul class="nav-s-menu-subcategory">
 								<li>
 									<a href="#">Мода</a>
@@ -161,7 +162,7 @@
 							</ul>
 						</li>
 						<li class="nav-s-menu__item">
-							<a href="#" class="nav-s-menu__link _has-children">Стиль жизни</a>
+							<a href="#" class="nav-s-menu__link _has-children fas fa-chevron-down">Стиль жизни</a>
 							<ul class="nav-s-menu-subcategory">
 								<li>
 									<a href="#">Мода</a>
@@ -184,7 +185,7 @@
 							<a href="#" class="nav-s-menu__link">Шопинг</a>
 						</li>
 						<li class="nav-s-menu__item">
-							<a href="#" class="nav-s-menu__link _has-children _opened">Видео</a>
+							<a href="#" class="nav-s-menu__link _has-children fas fa-chevron-down _opened">Видео</a>
 							<ul class="nav-s-menu-subcategory _opened">
 								<li>
 									<a href="#">Мода</a>
@@ -227,24 +228,23 @@
 						</ul>
 					</div>
 
-					<div class="social">
-						<a href="#" class="social__link"><span class="icon-facebook"></span></a>
-						<a href="#" class="social__link"><span class="icon-twitter"></span></a>
-						<a href="#" class="social__link"><span class="icon-insta"></span></a>
-						<a href="#" class="social__link"><span class="icon-vk"></span></a>
-						<a href="#" class="social__link"><span class="icon-youtube"></span></a>
-					</div>
+					<ul class="social">
+						<li><a href="#" class="social__link"><span class="fab fa-facebook-f"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-twitter"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-vk"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-youtube"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-instagram"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-odnoklassniki"></span></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="search-modal">
-	    <button class="search-close icon-cross"></button>
+	    <button class="search-close fas fa-times"></button>
 	    <form action="#">
-	        <button class="icon-search" type="submit">
-	            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><path fill="currentColor" d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z"/></svg>
-	        </button>
+	        <button class="icon-search fas fa-search" type="submit"></button>
 	        <input type="text" class="search__input" placeholder="Что будем искать?">
 	    </form>
 	    <div class="search-result">
@@ -316,7 +316,7 @@
 	<!-- BEGIN CONTENT -->
 
 	<main class="content">
-<div class="section-hero" style="background-image: url('/static/img/content/section-astro-bg.jpg')">
+<div class="section-hero" style="background-image: url('static/img/content/section-astro-bg.jpg')">
     <h1>
         Гороскоп
     </h1>
@@ -342,7 +342,7 @@
 </div>
 
 <div class="content-wrap">
-    <article class="article-box">
+    <article class="astrosign-box">
         <div class="wrap">
             <div class="wrap-content">
                 <div class="breadcrumbs">
@@ -350,6 +350,195 @@
                         <li><a href="/">Главная</a></li>
                         <li><span>Мода</span></li>
                     </ul>
+                </div>
+
+                <h1>
+                    Гороскоп для Овна на сегодня
+                </h1>
+                <span class="date">
+                    24 августа 2018
+                </span>
+                <p>
+                    В тяжелый момент вещи (или люди) видятся совершенно в особом свете — и пусть затем все вроде бы возвращается на круги своя, в душе остается неприятный осадок. Однако, поразмыслив, вы смиряетесь с тем, что ничто не совершенно и никто не совершенен, — придется принять ситуацию такой, как есть. Если вы не готовы к такому развитию событий, единственный выход — выйти из игры.
+                </p>
+
+                <div class="article-sharing">
+                    <h5 class="article-sharing__title">Поделитесь с друзьями</h5>
+                    <div class="social social--circle">
+                        <a href="#" class="social__link"><span class="icon-facebook"></span></a>
+                        <a href="#" class="social__link"><span class="icon-twitter"></span></a>
+                        <a href="#" class="social__link"><span class="icon-vk"></span></a>
+                    </div>
+                </div>
+
+                <div class="subscribe-form subscribe-form--astro subscribe-form--sign">
+                    <h3 class="subscribe-form__title">
+                        Я хочу получать гороскоп Овна
+                        <label class="switcher">
+                            <input type="checkbox" value="full-horoscope" name="want-full-horoscope-switcher"/>
+                            <span class="label">Я хочу получать общий гороскоп</a></span>
+                        </label>
+                    </h3>
+                    <form class="subscribe-form__form" sction="#">
+                        <input type="hidden" value="false" name="want-full-horoscope" />
+                        <input name="email" type="text" placeholder="Введите e-mail" />
+                        <label class="checkbox">
+                            <input type="checkbox" value="agree" name="agree-with-statements"/>
+                            <span class="label">Я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+                        </label>
+                        <button type="submit" disabled>OK</button>
+                    </form>
+                </div>
+                <h2 class="read-more-title">Материалы по теме</h2>
+
+                <div class="astro-list astro-list--sign-page">
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign1.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Овен
+                        </div>
+                        <div class="astro-list-item__desc">
+                            21 марта — 20 апреля
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign2.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Телец
+                        </div>
+                        <div class="astro-list-item__desc">
+                            21 апреля — 21 мая
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign3.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Близнецы
+                        </div>
+                        <div class="astro-list-item__desc">
+                            22 мая — 21 июня
+                        </div>
+                    </div>
+                
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign4.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Рак
+                        </div>
+                        <div class="astro-list-item__desc">
+                            22 июня — 21 июля
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign5.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Лев
+                        </div>
+                        <div class="astro-list-item__desc">
+                            22 июля — 21 августа
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign6.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Дева
+                        </div>
+                        <div class="astro-list-item__desc">
+                            22 августа — 22 сентября
+                        </div>
+                    </div>
+                
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign7.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Весы        
+                        </div>
+                        <div class="astro-list-item__desc">
+                            23 сентрября — 25 октября
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign8.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Скорпион
+                        </div>
+                        <div class="astro-list-item__desc">
+                            26 октября — 23 ноября
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign9.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Стрелец
+                        </div>
+                        <div class="astro-list-item__desc">
+                            24 ноября — 21 декабря
+                        </div>
+                    </div>
+                
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign10.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Козерог
+                        </div>
+                        <div class="astro-list-item__desc">
+                            22 декабря — 19 января
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign11.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Водолей
+                        </div>
+                        <div class="astro-list-item__desc">
+                            20 января — 18 февраля
+                        </div>
+                    </div>
+                    <div class="astro-list-item">
+                        <a href="#" class="astro-list-item__link"></a>
+                        <div class="astro-list-item__img">
+                            <img src="static/img/content/astro-sign1.jpg" alt="Овен / 21 марта — 20 апреля" />
+                        </div>
+                        <div class="astro-list-item__title">
+                            Рыбы
+                        </div>
+                        <div class="astro-list-item__desc">
+                            19 февраля — 20 марты
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="wrap-sidebar">
@@ -409,7 +598,7 @@
         <a class="digital__content-download" href="#""></a>
     </div>
     <div class="digital__image">
-        <img src="/static/img/content/mag-example.png" alt="В моде 80-е!" />
+        <img src="static/img/content/mag-example.png" alt="В моде 80-е!" />
     </div>
 </section>
 <!-- BEGIN FOOTER -->	
@@ -458,12 +647,14 @@
                 InStyle.ru - это сайт о моде, красоте, стиле жизни, гид по шопингу, светская хроника, звездный стиль, подробный анализ трендов, новости из жизни знаменитостей и самые значимые культурные события. Самая актуальная информация из мира моды, красоты, культуры, светской жизни, гастрономии, путешествий, а также - психология отношений, детская мода, обзоры модных гаджетов и собственный онлайн-магазин. 
                 Сайт InStyle.ru является женским онлайн-журналом, отражающим все аспекты стиля жизни с акцентом на модных трендах.
             </div>  
-            <div class="social">
-                <a href="#" class="social__link"><span class="icon-facebook"></span></a>
-                <a href="#" class="social__link"><span class="icon-twitter"></span></a>
-                <a href="#" class="social__link"><span class="icon-youtube"></span></a>
-                <a href="#" class="social__link"><span class="icon-insta"></span></a>
-            </div>
+            <ul class="social">
+                <li><a href="#" class="social__link"><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href="#" class="social__link"><span class="fab fa-twitter"></span></a></li>
+                <li><a href="#" class="social__link"><span class="fab fa-vk"></span></a></li>
+                <li><a href="#" class="social__link"><span class="fab fa-youtube"></span></a></li>
+                <li><a href="#" class="social__link"><span class="fab fa-instagram"></span></a></li>
+                <li><a href="#" class="social__link"><span class="fab fa-odnoklassniki"></span></a></li>
+            </ul>
             <p class="copy">&copy; 2016 InStyle. Все права защищены. </p>
             <span class="design-by"><a href="#"">Дизайн сайта</a> &mdash; FIRON</span>
         </div>
@@ -472,18 +663,18 @@
 
 <!-- FOOTER EOF   -->
 <div class="overlay"></div>
-    <a href="#" class="body-advert" style="background-image: url('/static/img/content/advert-done.jpg');"></a>
+    <a href="#" class="body-advert" style="background-image: url('static/img/content/advert-done.jpg');"></a>
 </div>
 <!-- BODY EOF   -->
 
 
 <div class="icon-load"></div>
-<script src="/static/js/separate-js/jquery-3.2.1.min.js?ver1.0"></script>
-<script src="/static/js/separate-js/jquery.mousewheel.js"></script>
-<script src="/static/js/separate-js/jquery.nicescroll.min.js"></script>
-<script src="/static/js/separate-js/jquery.formstyler.min.js?ver1.0"></script>
-<script src="/static/js/separate-js/slick.min.js"></script>
-<script src="/static/js/separate-js/main.js"></script>
+<script src="static/js/separate-js/jquery-3.2.1.min.js?ver1.0"></script>
+<script src="static/js/separate-js/jquery.mousewheel.js"></script>
+<script src="static/js/separate-js/jquery.nicescroll.min.js"></script>
+<script src="static/js/separate-js/jquery.formstyler.min.js?ver1.0"></script>
+<script src="static/js/separate-js/slick.min.js"></script>
+<script src="static/js/separate-js/main.js"></script>
 
 </body>
 </html>

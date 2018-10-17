@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 80px;
     padding: 60px 0;
     color: #333333;
 
@@ -12,13 +13,13 @@
         text-align: center;
         flex-grow: 1;
         flex-shrink: 0;
-        padding: 50px 90px;
+        padding: 50px 20px 50px 90px;
 
         &-date {
             font-family: $semibold;
             color: $orange;
             font-size: 14px;
-            margin: 0 0 20px 0;
+            margin: 0 0 15px 0;
             text-transform: uppercase;
         }
 
@@ -37,7 +38,7 @@
 
         &-download {
             display: inline-block;
-            margin: 40px auto 0;
+            margin: 45px auto 0;
             width: 168px;
             height: 50px;
             background: url(../img/content/load-from-appstore.png);
@@ -49,7 +50,7 @@
         text-align: left;
         flex-grow: 1;
         flex-shrink: 0;
-        padding: 0 90px 0 0;
+        padding: 0 40px 0 47px;
 
         img {
             max-width: 100%;
@@ -73,6 +74,30 @@
         }
     }
 
+    @media screen and (max-width: 1023px) {
+        padding: 60px 0 50px;
+
+        &__content {
+            padding: 25px 40px 25px 60px;
+        }
+
+        &__content-date {
+            margin: 0 0 10px 0;
+        }
+
+        &__content-title {
+            margin: 0 0 20px 0;
+        }
+
+        &__content-download {
+            margin: 30px 0 0 0;
+        }
+
+        &__image {
+            padding-left: 20px;
+        }
+    }
+
     @media screen and (max-width: 900px) {
         &__content {
             width: 50%;
@@ -89,11 +114,12 @@
         display: block;
         padding: 25px 20px 100px 20px;
         position: relative;
+        margin-top: 40px;
 
         &__content {
             width: auto;
             padding: 0;
-            margin: 0 0 25px 0;
+            margin: 0 0 20px 0;
 
             &-date {
                 font-size: 10px;
@@ -102,7 +128,7 @@
 
             &-title {
                 font-size: 22px;
-                margin: 0 0 20px 0;
+                margin: 0 0 12px 0;
             }
 
             &-text {
@@ -125,7 +151,8 @@
 
             img {
                 margin: 0 auto;
-                max-width: 290px;
+                max-width: 280px;
+                width: auto;
             }
         }
     }

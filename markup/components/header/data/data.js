@@ -2,7 +2,8 @@ header: {
     main: {
         title: 'Instyle - Главная',
         showHeaderTop: true,
-        asFixed: false
+        asFixed: false,
+        isMainPage: true
     },
     article: {
         title: 'Instyle - Статья',

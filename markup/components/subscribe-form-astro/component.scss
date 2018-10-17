@@ -97,6 +97,60 @@
     }
 }
 
+.subscribe-form--sign {
+    margin: 30px 0 90px 0;
+
+    .switcher {
+        font-family: $semibold;
+        font-size: 12px;
+        margin: 8px 0 0 0;
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        .label {
+            padding: 0 0 0 50px;
+            position: relative;
+            cursor: pointer;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: -2px;
+                width: 40px;
+                height: 20px;
+                border-radius: 20px;
+                display: block;
+                background: #dedede;
+                transition: background-color .2s ease-out;
+            }
+
+            &:after {
+                position: absolute;
+                display: block;
+                border-radius: 16px;
+                content: '';
+                left: 2px;
+                top: 0;
+                background: #fff;
+                width: 16px;
+                height: 16px;
+                transition: left .2s ease-out;
+            }
+        }
+
+        input[type=checkbox]:checked + .label:after {
+            left: 22px;
+        }
+
+        input[type=checkbox]:checked + .label:before {
+            background-color: #d29f47;
+        }
+    }
+}
+
 .subscribe-form--astro .subscribe-form__form {
     width: auto;
     flex-grow: 1;

@@ -2,7 +2,8 @@
     main: {
         title: 'Instyle - Главная',
         showHeaderTop: true,
-        asFixed: false
+        asFixed: false,
+        isMainPage: true
     },
     article: {
         title: 'Instyle - Статья',
@@ -36,4 +37,7 @@ __pages: [{
              },{
                 name: 'section',
                 href: 'section.html'
+             },{
+                name: 'video',
+                href: 'video.html'
              }]

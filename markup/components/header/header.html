@@ -5,9 +5,11 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 	<title>{{this.title}}</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
-	<link rel="stylesheet" href="%=static=%css/separate-css/jquery.jscrollpane.css">
-	<link rel="stylesheet" type="text/css" href="%=static=%css/main.css" />	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/solid.css" integrity="sha384-osqezT+30O6N/vsMqwW8Ch6wKlMofqueuia2H7fePy42uC05rm1G+BUPSd2iBSJL" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+	<link rel="stylesheet" href="static/css/separate-css/jquery.jscrollpane.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css" />	
 	<script>
 		var tag = document.createElement('script');
 		tag.src = "https://www.youtube.com/iframe_api";
@@ -27,10 +29,12 @@
 	<header class="header {{#if asFixed}}as-fixed{{/if}}">
 		<div class="header-social-bar">
 			<ul class="header-social-bar__socials">
-				<li><a href="#" class="social__link"><span class="icon-facebook"></span></a></li>
-				<li><a href="#" class="social__link"><span class="icon-twitter"></span></a></li>
-				<li><a href="#" class="social__link"><span class="icon-youtube"></span></a></li>
-				<li><a href="#" class="social__link"><span class="icon-insta"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-facebook-f"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-twitter"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-vk"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-youtube"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-instagram"></span></a></li>
+				<li><a href="#" class="social__link"><span class="fab fa-odnoklassniki"></span></a></li>
 			</ul>
 			<div class="header-social-bar__subscribe-links">
 				<ul>
@@ -40,7 +44,7 @@
 			</div>
 		</div>
 		{{#if showHeaderTop}}
-		<div class="header-top" style="background-image: url('%=static=%img/content/main-header-bg.jpg')">
+		<div class="header-top {{#if isMainPage}}header-top--main-page{{/if}}" style="background-image: url('static/img/content/main-header-bg.jpg')">
 			<div class="header-top__content">
 				<svg xmlns="http://www.w3.org/2000/svg" width="434" height="102" viewBox="0 0 434 102">
 					<path fill="currentColor" fill-rule="evenodd" d="M103.436 71.899l8.272-12.903c4.086 3.493 17.727 11.688 41.447 11.688 14.163 0 25.648-4.16 25.77-12.89 0-4.448-4.08-7-11.217-8.342-6.765-1.338-14.677-1.21-19.146-1.473-14.153-.814-42.073-1.35-42.073-22.452C106.49 7.397 125.997 0 148.562 0c20.548 0 34.193 5.102 44.646 12.625l-8.42 12.363c-7.776-6.182-20.267-11.01-35.96-11.01-11.23 0-25.764 3.216-25.764 10.617 0 7.389 21.057 7.523 25.764 7.789 16.194.81 46.168.94 46.036 25.14 0 17.865-17.096 27.408-41.573 27.408-18.882 0-35.965-3.501-49.855-13.033zM225.61 84.932c-13.151-.135-19.761-5.649-19.761-19.898V33.865h-9.957v-13.97h9.957V4.16h15.94v15.734h18.865v13.971h-18.865V64.36c0 4.169 1.266 6.325 6.629 6.198 5.606 0 12.236-2.56 12.236-2.56l3.69 13.835s-11.473 2.965-18.617 2.965l-.117.135zM266.154 102l12.128-21.1-32.398-61.006h18.756l22.572 44.465 23.333-44.465h17.6L283.766 102h-17.61zm67.096-19.084V1.743h16.073v81.173H333.25zm39.283-25.122c2.306 8.312 12.378 12.35 21.687 12.35 17.72 0 24.848-4.83 29.2-8.337l8.04 11.708c-9.441 7.118-18.891 11.282-37.24 11.417-24.743 0-39.042-14.248-39.042-33.467 0-19.89 15.934-33.194 38.903-33.064 22.953 0 39.787 11.7 39.919 39.52h-61.35l-.117-.127zm0-13.317h42.971c-2.166-7.253-11.088-11.823-21.548-11.823-10.715 0-19.257 4.43-21.423 11.823zM0 83.039V2.679h16.82v80.36H0zm79.458-32.515c0-13.3-2.815-17.33-16.597-17.33-12.114 0-20.91 5.642-22.31 6.992v42.853H24.61V20.164h15.428v4.431c3.829-2.156 11.6-6.059 23.464-6.059 23.078 0 32.004 8.08 32.147 27.021V83.04H79.32l.138-32.515z"/>
@@ -51,13 +55,10 @@
 		<div class="header-scroll-marker"></div>
 		<div class="header-bottom">
 			<button class="burger">
-				<span class="icon-burger"></span>
+				<span class="fas fa-bars"></span>
 			</button>
 			<button class="open-search js-open-search">
-				<span class="icon-search open-search__icon">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><path fill="currentColor" d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z"/></svg>
-				</span>
-				<span class="icon-cross open-search__icon"></span>
+				<span class="fas fa-search"></span>
 			</button>
 			<div class="logo" style="display: none;">
 				<a href="#">
@@ -153,7 +154,7 @@
 							<a href="#" class="nav-s-menu__link">Красота</a>
 						</li>
 						<li class="nav-s-menu__item">
-							<a href="#" class="nav-s-menu__link _has-children">Звезды</a>
+							<a href="#" class="nav-s-menu__link _has-children fas fa-chevron-down">Звезды</a>
 							<ul class="nav-s-menu-subcategory">
 								<li>
 									<a href="#">Мода</a>
@@ -170,7 +171,7 @@
 							</ul>
 						</li>
 						<li class="nav-s-menu__item">
-							<a href="#" class="nav-s-menu__link _has-children">Стиль жизни</a>
+							<a href="#" class="nav-s-menu__link _has-children fas fa-chevron-down">Стиль жизни</a>
 							<ul class="nav-s-menu-subcategory">
 								<li>
 									<a href="#">Мода</a>
@@ -193,7 +194,7 @@
 							<a href="#" class="nav-s-menu__link">Шопинг</a>
 						</li>
 						<li class="nav-s-menu__item">
-							<a href="#" class="nav-s-menu__link _has-children _opened">Видео</a>
+							<a href="#" class="nav-s-menu__link _has-children fas fa-chevron-down _opened">Видео</a>
 							<ul class="nav-s-menu-subcategory _opened">
 								<li>
 									<a href="#">Мода</a>
@@ -236,13 +237,14 @@
 						</ul>
 					</div>
 
-					<div class="social">
-						<a href="#" class="social__link"><span class="icon-facebook"></span></a>
-						<a href="#" class="social__link"><span class="icon-twitter"></span></a>
-						<a href="#" class="social__link"><span class="icon-insta"></span></a>
-						<a href="#" class="social__link"><span class="icon-vk"></span></a>
-						<a href="#" class="social__link"><span class="icon-youtube"></span></a>
-					</div>
+					<ul class="social">
+						<li><a href="#" class="social__link"><span class="fab fa-facebook-f"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-twitter"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-vk"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-youtube"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-instagram"></span></a></li>
+						<li><a href="#" class="social__link"><span class="fab fa-odnoklassniki"></span></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
