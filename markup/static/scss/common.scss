@@ -696,10 +696,21 @@ body {
     }
   }
 
+  @media screen and (max-width: 900px) {
+    &:first-child {
+      margin-top: 40px !important;
+    }
+  }
+
   @media screen and (max-width: 767px) {
     display: none;
+
+    & + h1 {
+      margin-top: 25px;
+    }
   }
 }
+
 
 /* Rubric ============ */
 
@@ -1083,6 +1094,14 @@ body {
 
 .article-sharing {
 
+  ul {
+    list-style: none;
+
+    li {
+      margin: 0 20px 0 0;
+    }
+  }
+
   margin: 30px 0;
 
   &__title {
@@ -1128,6 +1147,35 @@ body {
 
   @media screen and (max-width: 767px) {
     font-size: 12px; 
+    margin: 40px -10px;
+
+    figcaption {
+      margin-top: 15px;
+    }
+  }
+}
+
+.article-images {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+
+  .image {
+    margin: 0 10px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin: 40px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    text-align: center;
+    margin: 0;
+
+    .image {
+      margin: 40px auto;
+    }
   }
 }
 
@@ -2419,7 +2467,7 @@ body {
     &--full .imaged-video {
       height: auto;
       min-height: 210px;
-      padding: 0 0 20px 0;
+      padding: 0 30px 20px;
   
       &:before {
         margin: 0 auto 15px;
