@@ -41,6 +41,9 @@ __pages: [{
                 name: 'section',
                 href: 'section.html'
              },{
+                name: 'tag',
+                href: 'tag.html'
+             },{
                 name: 'video',
                 href: 'video.html'
              }]
