@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
 	<link rel="stylesheet" href="static/css/separate-css/jquery.jscrollpane.css">
+	<link rel="stylesheet" href="static/css/separate-css/jquery.multiselect.css" />
 	<link rel="stylesheet" type="text/css" href="static/css/main.css" />	
 	<script>
 		var tag = document.createElement('script');
@@ -316,154 +317,410 @@
 	<!-- BEGIN CONTENT -->
 
 	<main class="content">
-<div class="section-hero" style="background-image: url('static/img/content/section-video-bg.jpg')">
+<div class="section-hero section-hero--no-menu" style="background-image: url('static/img/content/section-shopping-bg.jpg')">
     <h1>
-        Видео
+        Шоппинг
     </h1>
-    <div class="section-hero__menu">
-        <a class="section-hero__menu-trigger fas fa-chevron-down">
-            Выберите раздел
-        </a>
-        <ul class="menu menu--section">
-            <li class="menu__item">
-                <a href="#" class="menu__link">Мода</a>
-            </li>
-            <li class="menu__item menu__item--active">
-                <a href="#" class="menu__link">Красота</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Стиль жизни</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Мнения</a>
-            </li>
-        </ul>
-    </div>
 </div>
 
-<div class="imaged-block-wrapper imaged-block-wrapper--video imaged-block-wrapper--full">
-    <div class="imaged-block-wrapper__left">
-        <div class="imaged-block">
-            <div class="imaged-block__content" style="background-image: url(static/img/content/imaged-bg-3.jpg)">
-                <div class="imaged-block__content-wrapper">
-                    <a href="#" class="imaged-video">
-                        Ирина Мартыненко: модель, актриса и диджей, чье имя скоро узнают все
-                    </a>
+<div class="product-search-bar">
+    <form action="#">
+        <button class="icon-search fas fa-search" type="submit"></button>
+        <input type="text" class="search__input" placeholder="Что будем искать?">
+    </form>
+</div>
+
+<div class="product-filter-bar">
+    <div class="product-filter-bar__title">
+        Фильтр поиска
+    </div>
+    <div class="product-filter-bar__options">
+        <form action="#">
+            <div class="box-filter-multiselect">
+                <div class="box-filter-body">
+                    <div class="box-filter-multiselect__item">
+                        <label class="multiselect__label">Для кого</label>
+                        <select  multiple="multiple" id="m-sex" class="multiselect">
+                            <option value="Женщины">Женщины</option>
+                            <option value="Мужчины">Мужчины</option>
+                            <option value="Дети">Дети</option> 
+                        </select>
+                    </div>
+                    <div class="box-filter-multiselect__item">
+                        <label class="multiselect__label">Бренд</label>
+                        <select  multiple="multiple" id="m-designer" class="multiselect" >
+                            <option value="3LAB" data-count="13">3LAB</option>
+                            <option value="AGL" data-count="7">AGL</option>
+                            <option value="ASH" data-count="32">ASH</option>
+                            <option value="Alberta Ferretti" data-count="11">Alberta Ferretti</option>
+                            <option value="Aletta" data-count="4">Aletta</option>
+                            <option value="Alexander McQueen" data-count="48">Alexander McQueen</option>
+                            <option value="Alexandre Birman" data-count="56">Alexandre Birman</option>
+                            <option value="Altuzarra" data-count="10">Altuzarra</option>
+                            <option value="Amouage" data-count="17">Amouage</option>
+                            <option value="Aquazzura" data-count="11">Aquazzura</option>
+                            <option value="Aveda" data-count="9">Aveda</option>
+                            <option value="Baccarat" data-count="37">Baccarat</option>
+                            <option value="Balenciaga" data-count="15">Balenciaga</option>
+                            <option value="Ballin" data-count="21">Ballin</option>
+                        </select>
+                    </div>
+                    <div class="box-filter-multiselect__item">
+                        <label class="multiselect__label">Категория</label>
+                        <select  multiple="multiple" id="m-category" class="multiselect">
+                            <option value="Baccarat">Baccarat</option>
+                            <option value="Balenciaga">Balenciaga</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <div class="imaged-block__related hide-on-mobile">
-                <a href="#" class="imaged-block__related-item imaged-video-item" style="background-image: url(static/img/content/imaged-item-3-1.jpg)">
-                    <span>Как ухаживает за кожей Тамуна Циклаури</span>
-                </a>
-                <a href="#" class="imaged-block__related-item imaged-video-item" style="background-image: url(static/img/content/imaged-item-3-2.jpg)">
-                    <span>Вера Брежнева — о своем новом хите и любимых средствах La Mer</span>
-                </a>
-                <a href="#" class="imaged-block__related-item imaged-video-item" style="background-image: url(static/img/content/imaged-item-3-3.jpg)">
-                    <span>Яна Расковалова — о бриллиантах и своих бьюти-сокровищах</span>
-                </a>
-                <a href="#" class="imaged-block__related-item imaged-video-item" style="background-image: url(static/img/content/imaged-item-3-2.jpg)">
-                    <span>Вера Брежнева — о своем новом хите и любимых средствах La Mer</span>
-                </a>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
 
-<div class="article-list-with-ad">
-    <div class="article-list-with-ad__items">
-        <div class="article article--video-sm">
-            <a class="article__link" href="#"></a>
-            <div class="article__image">
-                <img src="http://via.placeholder.com/300x220" alt="В Вероне прошел показ Tezenis осень-зима 2018/19" />
-            </div>
-            <div class="article__content">
-                <span class="article__section"><a href="#">Мода</a></span>
-                <h5 class="article__title">В Вероне прошел показ Tezenis осень-зима 2018/19</h5>
-            </div>
-        </div>
-        <div class="article article--video-sm">
-            <a class="article__link" href="#"></a>
-            <div class="article__image">
-                <img src="http://via.placeholder.com/300x220" alt="Показ Dolce&Gabbana Alta Moda на озере Комо" />
-            </div>
-            <div class="article__content">
-                <span class="article__section"><a href="#">Мода</a></span>
-                <h5 class="article__title">Показ Dolce&Gabbana Alta Moda на озере Комо</h5>
-            </div>
-        </div>
-        <div class="article article--video-sm">
-            <a class="article__link" href="#"></a>
-            <div class="article__image">
-                <img src="http://via.placeholder.com/300x220" alt="В Вероне прошел показ Tezenis осень-зима 2018/19" />
-            </div>
-            <div class="article__content">
-                <span class="article__section"><a href="#">Мода</a></span>
-                <h5 class="article__title">В Вероне прошел показ Tezenis осень-зима 2018/19</h5>
-            </div>
-        </div>
-        <div class="article article--video-sm">
-            <a class="article__link" href="#"></a>
-            <div class="article__image">
-                <img src="http://via.placeholder.com/300x220" alt="Показ Dolce&Gabbana Alta Moda на озере Комо" />
-            </div>
-            <div class="article__content">
-                <span class="article__section"><a href="#">Мода</a></span>
-                <h5 class="article__title">Показ Dolce&Gabbana Alta Moda на озере Комо</h5>
-            </div>
-        </div>
-        <div class="article article--video-sm">
-            <a class="article__link" href="#"></a>
-            <div class="article__image">
-                <img src="http://via.placeholder.com/300x220" alt="В Вероне прошел показ Tezenis осень-зима 2018/19" />
-            </div>
-            <div class="article__content">
-                <span class="article__section"><a href="#">Мода</a></span>
-                <h5 class="article__title">В Вероне прошел показ Tezenis осень-зима 2018/19</h5>
-            </div>
-        </div>
-        <div class="article article--video-sm">
-            <a class="article__link" href="#"></a>
-            <div class="article__image">
-                <img src="http://via.placeholder.com/300x220" alt="Показ Dolce&Gabbana Alta Moda на озере Комо" />
-            </div>
-            <div class="article__content">
-                <span class="article__section"><a href="#">Мода</a></span>
-                <h5 class="article__title">Показ Dolce&Gabbana Alta Moda на озере Комо</h5>
-            </div>
-        </div>
-    </div>
-    <div class="article-list-with-ad__ad hide-on-tablet">
-        <div class="adv-banner">
-            <a href="#">
-                <img src="http://via.placeholder.com/300x600" alt="">
-            </a>
-        </div>
-    </div>
+<div class="adv-banner adv-banner-250x250 show-on-mobile">
+    <a href="#">
+        <img src="http://via.placeholder.com/250x250" alt="">
+    </a>
 </div>
 
-<div class="articles-row articles-row--2-in-line">
-    <div class="article article--1-from-2 article--video">
-        <a class="article__link" href="#"></a>
-        <div class="article__image">
-            <img src="static/img/content/img-2-in-1-example-1.jpg" alt="Ветер в волосах: средства, которые не утяжеляют прическу" />
-        </div>
-        <div class="article__content">
-            <h5 class="article__title">Ветер в волосах: средства, которые не утяжеляют прическу</h5>
+<div class="shopping-list-container">
+    <h2 class="read-more-title">Последние материалы</h2>
+    <div class="shopping-list-section">
+        <h3 class="shopping-list-section__title">
+            Однажды в Калифорнии:
+            12 пар самых модных казаков
+        </h3>
+        <div class="shopping-list-section__items">
+            <div class="product-wrap product-wrap--products-carousel">
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="Часы Rendez-Vous Night &amp; Day">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Тренч в клетку</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Цветочно-древесный аромат Daisy Love, 50 мл</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Giorgio Armani</a>
+                            <h6 class="product__title">Сияющая пудра Neo Nude Fusion Powder, оттенок 5.5</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Stella McCartney</a>
+                            <h6 class="product__title">Клатч с отделкой кристаллами</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="Часы Rendez-Vous Night &amp; Day">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Тренч в клетку</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Цветочно-древесный аромат Daisy Love, 50 мл</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Giorgio Armani</a>
+                            <h6 class="product__title">Сияющая пудра Neo Nude Fusion Powder, оттенок 5.5</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Stella McCartney</a>
+                            <h6 class="product__title">Клатч с отделкой кристаллами</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="article article--1-from-2 article--video">
-        <a class="article__link" href="#"></a>
-        <div class="article__image">
-                <img src="static/img/content/img-2-in-1-example-2.jpg" alt="Голливудские лайфхаки: Приянка Чопра поделилась секретами красоты<" />
-        </div>
-        <div class="article__content">
-            <h5 class="article__title">Голливудские лайфхаки: Приянка Чопра поделилась секретами красоты</h5>
+    <div class="adv-banner adv-banner-1280x300 hide-on-mobile">
+        <a href="#">
+            <div class="only-text">banner</div>
+        </a>
+    </div>
+    <div class="shopping-list-section">
+        <h3 class="shopping-list-section__title">
+            Классика жанра:
+            14 кожаных курток на осень
+        </h3>
+        <div class="shopping-list-section__items">
+            <div class="product-wrap product-wrap--products-carousel">
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="Часы Rendez-Vous Night &amp; Day">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Тренч в клетку</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Цветочно-древесный аромат Daisy Love, 50 мл</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Giorgio Armani</a>
+                            <h6 class="product__title">Сияющая пудра Neo Nude Fusion Powder, оттенок 5.5</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Stella McCartney</a>
+                            <h6 class="product__title">Клатч с отделкой кристаллами</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="Часы Rendez-Vous Night &amp; Day">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Тренч в клетку</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Цветочно-древесный аромат Daisy Love, 50 мл</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Giorgio Armani</a>
+                            <h6 class="product__title">Сияющая пудра Neo Nude Fusion Powder, оттенок 5.5</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Stella McCartney</a>
+                            <h6 class="product__title">Клатч с отделкой кристаллами</h6>
+                            <div class="product__price">335 000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    <div class="shopping-list-section">
+        <h3 class="shopping-list-section__title">
+            Всегда в движении:
+            18 модных вещей с бахромой
+        </h3>
+        <div class="shopping-list-section__items">
+            <div class="product-wrap product-wrap--products-carousel">
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="Часы Rendez-Vous Night &amp; Day">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Тренч в клетку</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Цветочно-древесный аромат Daisy Love, 50 мл</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Giorgio Armani</a>
+                            <h6 class="product__title">Сияющая пудра Neo Nude Fusion Powder, оттенок 5.5</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Stella McCartney</a>
+                            <h6 class="product__title">Клатч с отделкой кристаллами</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="Часы Rendez-Vous Night &amp; Day">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Тренч в клетку</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">MARC JACOBS</a>
+                            <h6 class="product__title">Цветочно-древесный аромат Daisy Love, 50 мл</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Giorgio Armani</a>
+                            <h6 class="product__title">Сияющая пудра Neo Nude Fusion Powder, оттенок 5.5</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrap__item">
+                    <div class="product">
+                        <a href="#" class="product__link"></a>
+                        <div class="product__img">
+                            <img src="http://via.placeholder.com/260x260" alt="">
+                        </div>
+                        <div class="product__head">
+                            <a href="#" class="product__brand">Stella McCartney</a>
+                            <h6 class="product__title">Клатч с отделкой кристаллами</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="show-more-block">
-    <button class="show-more" type="button">Загрузить еще</button>
+    <div class="show-more-block">
+        <button class="show-more" type="button">Посмотреть все</button>
+    </div>
 </div>
 
 </main>	
@@ -555,6 +812,7 @@
 
 <div class="icon-load"></div>
 <script src="static/js/separate-js/jquery-3.2.1.min.js?ver1.0"></script>
+<script src="static/js/separate-js/jquery.multiselect.js"></script>
 <script src="static/js/separate-js/jquery.mousewheel.js"></script>
 <script src="static/js/separate-js/jquery.nicescroll.min.js"></script>
 <script src="static/js/separate-js/jquery.formstyler.min.js?ver1.0"></script>

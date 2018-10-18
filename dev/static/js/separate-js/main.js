@@ -226,6 +226,7 @@ $(function(){
 	// 		enableobserver: true,
 	// 	}); 
 	// };
+	
 
 	/* ---------------------------------------------- /*
 	 * Styler
@@ -282,6 +283,49 @@ $(function(){
 	}
 
 	mobileSectionDropdowmHandler();
+
+
+	var productsListCarousel = function() {
+		var sliders = $('.product-wrap--products-carousel');
+		var settings = {
+			arrows: true,
+			dots: false,
+			centerMode: false,
+			prevArrow: '<button class="products-carousel__nav products-carousel__nav--left"></button>',
+			nextArrow: '<button class="products-carousel__nav products-carousel__nav--right"></button>',
+			responsive: [
+				{
+					breakpoint: 9999,
+					settings: {
+						slidesToScroll: 4,
+						slidesToShow: 4,
+					}
+		        },{
+		            breakpoint: 1023,
+		            settings: {
+						slidesToScroll: 3,
+						slidesToShow: 3,
+					}
+		        },{
+		            breakpoint: 767,
+		            settings: {
+						slidesToScroll: 1,
+						slidesToShow: 1,
+						arrows: false,
+						dots: false,
+						centerMode: true,
+					}
+		        },
+	        ]
+		};
+
+
+		sliders.each(function (index,slider) {
+			$(slider).slick(settings);
+		});
+	}
+
+	productsListCarousel();
 
 	
 	/* ---------------------------------------------- /*

@@ -46,7 +46,8 @@
     }
 
     .jq-selectbox__trigger-arrow:before {
-        content: "";
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
         color: #878787;
         font-weight: 600;
         font-size: 13px;

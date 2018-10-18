@@ -44,6 +44,9 @@ __pages: [{
                 name: 'section',
                 href: 'section.html'
              },{
+                name: 'shopping-list',
+                href: 'shopping-list.html'
+             },{
                 name: 'tag',
                 href: 'tag.html'
              },{
